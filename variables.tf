@@ -15,7 +15,7 @@ variable "domain" {
 
 variable "namespace" {
   type        = string
-  description = "Namespace for Vault release"
+  description = "Namespace for External DNS release"
 }
 
 variable "oidc_provider_arn" {
