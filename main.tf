@@ -38,7 +38,10 @@ resource "helm_release" "cert_manager" {
   values     = [
     yamlencode({
       fullnameOverride = "external-dns"
-
+      serviceAccount = {
+        create = false
+        name = kubernetes_service_account.external_dns_sa.metadata[0].name
+      }
     })
   ]
 }
