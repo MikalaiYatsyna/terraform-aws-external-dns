@@ -1,4 +1,4 @@
-    locals {
+locals {
   service_account_name = "external-dns-sa"
 }
 
