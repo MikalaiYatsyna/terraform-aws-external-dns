@@ -30,7 +30,7 @@ module "iam_role" {
 }
 
 resource "helm_release" "cert_manager" {
-  repository = "https://charts.bitnami.com/bitnami"
+  repository = "https://kubernetes-sigs.github.io/external-dns/"
   chart      = "external-dns"
   name       = "external-dns"
   namespace  = var.namespace
@@ -42,6 +42,7 @@ resource "helm_release" "cert_manager" {
         create = false
         name   = kubernetes_service_account.external_dns_sa.metadata[0].name
       }
+      policy = "sync"
     })
   ]
 }
