@@ -33,6 +33,7 @@ resource "helm_release" "cert_manager" {
   repository = "https://kubernetes-sigs.github.io/external-dns/"
   chart      = "external-dns"
   name       = "external-dns"
+  version    = "1.14.2"
   namespace  = var.namespace
   atomic     = true
   values = [
