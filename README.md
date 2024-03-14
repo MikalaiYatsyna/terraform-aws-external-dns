@@ -4,7 +4,10 @@ Terraform module to provision external DNS on EKS cluster
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.7.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.59.0 |
 
 ## Providers
 
@@ -26,9 +29,9 @@ No requirements.
 |------|------|
 | [helm_release.cert_manager](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kubernetes_service_account.external_dns_sa](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service_account) | resource |
-| [aws_eks_cluster.eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
-| [aws_eks_cluster_auth.eks_cluster_auth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster_auth) | data source |
-| [aws_route53_zone.zone](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone) | data source |
+| [aws_eks_cluster.eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/4.59.0/docs/data-sources/eks_cluster) | data source |
+| [aws_eks_cluster_auth.eks_cluster_auth](https://registry.terraform.io/providers/hashicorp/aws/4.59.0/docs/data-sources/eks_cluster_auth) | data source |
+| [aws_route53_zone.zone](https://registry.terraform.io/providers/hashicorp/aws/4.59.0/docs/data-sources/route53_zone) | data source |
 
 ## Inputs
 
