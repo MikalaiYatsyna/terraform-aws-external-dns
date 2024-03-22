@@ -2,10 +2,7 @@ resource "kubernetes_service_account" "external_dns_sa" {
   metadata {
     name      = var.service_account_name
     namespace = var.namespace
-    annotations = {
-      "eks.amazonaws.com/role-arn"               = var.iam_role_arn
-      "eks.amazonaws.com/sts-regional-endpoints" = "true"
-    }
+    annotations = var.service_account_annotations
   }
   secret {
     name = "cert-manager-sa-secret"

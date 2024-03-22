@@ -30,4 +30,13 @@ variable "iam_role_arn" {
   description = "IAM Role ARN to be attachted to service account."
 }
 
-variable "service_account_name" {}
+
+variable "service_account_name" {
+  type = string
+  description = "Kubernetes service account name, to be created and used for cert-manager."
+}
+
+variable "service_account_annotations" {
+  type = map(string)
+  description = "Annotations to be applied to service account. e.g 'eks.amazonaws.com/sts-regional-endpoints' = 'true'."
+}
